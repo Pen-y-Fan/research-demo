@@ -1,0 +1,25 @@
+parameters:
+    sets:
+        - 'psr12'
+        - 'php71'
+        - 'symplify'
+        - 'common'
+        - 'clean-code'
+
+    line_ending: "\n"
+
+    # 4 spaces
+    indentation: "    "
+
+    skip:
+        Symplify\CodingStandard\Sniffs\Architecture\DuplicatedClassShortNameSniff: null
+
+    # bug? (PHPStan is fine with this type hint and use of use Illuminate\Support\Facades\Validator;)
+    # generated files ( Class \Illuminate\Contracts\Validation\Validator
+    #     should not be referenced via a fully qualified name, but via a use statement.)
+    exclude_files:
+        - 'app/Http/Controllers/Auth/RegisterController.php'
+
+services:
+    Symplify\CodingStandard\Sniffs\CleanCode\CognitiveComplexitySniff:
+        max_cognitive_complexity: 8

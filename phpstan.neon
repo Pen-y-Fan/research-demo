@@ -1,0 +1,36 @@
+includes:
+    - vendor/nunomaduro/larastan/extension.neon
+    - vendor/symplify/phpstan-extensions/config/config.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+
+parameters:
+    paths:
+        - app
+        - tests
+
+    # The level 8 is the highest level
+    level: 8
+
+    checkGenericClassInNonGenericObjectType: false
+
+    # Larstan recommendation:
+    checkMissingIterableValueType: false
+
+    # to allow installing with various phsptan versions without reporting old errors here
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        # Larstan recommendation:
+        - '#Unsafe usage of new static#'
+
+    # buggy
+
+    # mixed
+
+    # cache buggy
+
+    # tests
+        # Factory factory gets the arguments dynamically
+        - '#Function factory invoked with 1 parameter, 0 required#'
+
+    # iterable

@@ -1,14 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
 
-class ConfirmPasswordController extends Controller
+final class ConfirmPasswordController extends Controller
 {
-    /*
+    use ConfirmsPasswords;
+
+    /**
     |--------------------------------------------------------------------------
     | Confirm Password Controller
     |--------------------------------------------------------------------------
@@ -17,9 +21,7 @@ class ConfirmPasswordController extends Controller
     | uses a simple trait to include the behavior. You're free to explore
     | this trait and override any functions that require customization.
     |
-    */
-
-    use ConfirmsPasswords;
+     */
 
     /**
      * Where to redirect users when the intended url fails.
@@ -30,8 +32,6 @@ class ConfirmPasswordController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {

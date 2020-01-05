@@ -11,8 +11,8 @@ trim_trailing_whitespace = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{yml,yaml}]
+[*.html]
 indent_size = 2
-ECHO is off.
-[*.html] 
-indent_size = 2 
+
+[*.blade.php]
+indent_size = 2

@@ -16,8 +16,10 @@
     "require-dev": {
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
+        "laravel/ui": "^1.1",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
+        "nunomaduro/larastan": "^0.5.0",
         "phpstan/phpstan": "^0.12.3",
         "phpstan/phpstan-doctrine": "^0.12.7",
         "phpstan/phpstan-phpunit": "^0.12.5",
@@ -52,6 +54,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "check-cs": "ecs check app tests --no-ansi",
+        "fix-cs": "ecs check app tests --fix --no-ansi",
+        "checkcode": "phpcs app tests --standard=PSR12",
+        "fixcode": "phpcbf app tests --standard=PSR12",
+        "phpstan": "phpstan analyse app tests --error-format symplify",
+        "test": "phpunit",
+        "tests": "phpunit",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
