@@ -53,7 +53,10 @@ Route::get(
     }
 );
 
+Route::post('/contact','ContactController@store')->name('contactUs');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/staff/contact','ContactController@index')->middleware('auth');
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

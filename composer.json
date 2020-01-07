@@ -58,7 +58,7 @@
         "fix-cs": "ecs check app tests --fix --no-ansi",
         "checkcode": "phpcs app tests --standard=PSR12",
         "fixcode": "phpcbf app tests --standard=PSR12",
-        "phpstan": "phpstan analyse app tests --error-format symplify",
+        "phpstan": "phpstan analyse --error-format symplify",
         "test": "phpunit",
         "tests": "phpunit",
         "post-autoload-dump": [

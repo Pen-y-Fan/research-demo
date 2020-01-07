@@ -9,7 +9,7 @@
 
           <div class="card-body">
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('contactUs') }}">
               @csrf
               <div class="form-group row">
                 <label for="name" class="col-md-4 col-form-label text-md-right">Name:</label>
@@ -67,7 +67,7 @@
                             class="form-control bg-info @error('message') is-invalid @enderror"
                             name="message"
                             rows="10"
-                            value="{{ old('message') }}" required></textarea>
+                            required>{{ old('message') }}</textarea>
                   @error('message')
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

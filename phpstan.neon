@@ -32,5 +32,6 @@ parameters:
     # tests
         # Factory factory gets the arguments dynamically
         - '#Function factory invoked with 1 parameter, 0 required#'
+        - '#Function factory invoked with 2 parameters, 0 required#'
 
     # iterable
