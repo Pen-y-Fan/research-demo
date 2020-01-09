@@ -80,6 +80,7 @@
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
                 </form>
+                <a class="dropdown-item" href="{{ url('home') }}">Dashboard</a>
               </div>
             </li>
           @endguest
@@ -95,6 +96,7 @@
         {{ session('status') }}
       </div>
     @endif
+
     @yield('content')
   </main>
 

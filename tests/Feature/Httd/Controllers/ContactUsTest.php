@@ -15,8 +15,6 @@ final class ContactUsTest extends AbstractTestCase
 
     public function testContactUsMessageIsSaved(): void
     {
-        $this->withoutExceptionHandling();
-
         $user = factory(User::class)->create();
 
         $response = $this->actingAs($user)->post('/contact', $this->data());
